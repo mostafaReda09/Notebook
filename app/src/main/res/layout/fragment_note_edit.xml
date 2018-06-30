@@ -1,0 +1,71 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingEnd="10dp"
+    android:paddingStart="10dp"
+    android:paddingTop="10dp"
+
+    android:background="@color/colorFregment"
+    tools:context="com.example.mostafa.notebook.NoteEditFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_image"
+        android:src="@drawable/p"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"/>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@id/edit_image"
+        android:layout_alignParentEnd="true"
+        android:layout_alignBottom="@id/edit_image"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/tittle_edit"
+            android:inputType="text"
+            android:text="new tittle"
+            android:textAppearance="?android:textAppearanceLarge"
+            android:hint="Enter Note Tittle"
+            android:minLines="1"/>
+
+    </ScrollView>
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/scroll"
+        android:layout_below="@id/edit_image"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/body_edit"
+            android:inputType="textMultiLine"
+            android:minLines="3"
+            android:text="body"
+            android:hint="Enter Your Note Right Here"
+            android:gravity="top"
+            />
+
+    </ScrollView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/save_note"
+        android:text="save note"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="true"
+        />
+
+</RelativeLayout>
